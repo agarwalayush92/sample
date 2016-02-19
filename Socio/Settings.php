@@ -18,6 +18,5 @@ namespace Socio
 		{
 			return self::$config["base_url"]. 'assets/' .self::$config["theme"]. '/' .$style;
 		}
-		
 	}
 }
