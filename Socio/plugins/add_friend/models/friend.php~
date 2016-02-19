@@ -1,0 +1,33 @@
+<?php 
+
+
+class Friend extends Model{
+	
+	
+	protected static $table = "friends";
+	protected static $attributes = array ( "user1" , "user2", "type");
+	
+	public function addfriend($userid)
+	{
+		$sql = "UPDATE user SET profile_pic = '$pic' WHERE id = " . Session::get('id');
+		$result = mysql_query($sql);
+		
+		if (!$result) {
+			return false;
+		}
+		else
+			return true;
+	}
+
+	public function getCommonFriends($user1,$user2)
+	{
+	}
+
+	public function getFriends($userid)
+	{
+	}
+
+	
+	
+	
+}

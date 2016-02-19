@@ -1,0 +1,26 @@
+<?php
+use Socio\Settings as Settings;
+class View
+{
+	protected static $js_files = null;
+	
+	public static function render($view, $arr = array())
+	{
+		extract($arr);
+		include __DIR__.'/views/'.Settings::get("theme")."/$view.php";
+	}
+	
+	public static function add_js($js)
+	{
+		self::$js_files["$js"] = "$js";
+	}
+	
+	public static function render_js()
+	{
+		$str = "";
+		foreach(self::$js_files as $file)
+			$str .= '<script type = "text/javascript" src = "'. $file .'" ></script>'."\n"; 
+			
+		return $str;
+	}
+}
