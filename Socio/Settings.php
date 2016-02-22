@@ -3,7 +3,6 @@ namespace Socio
 {
 	class Settings
 	{
-		
 		public static $config = null;
 		
 		public static function init($config)
@@ -15,6 +14,7 @@ namespace Socio
 		{
 			return self::$config[$key];
 		}
+		//random
 		public static function asset($style)
 		{
 			return self::$config["base_url"]. 'assets/' .self::$config["theme"]. '/' .$style;
