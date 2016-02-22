@@ -9,7 +9,7 @@ namespace Socio
 		{
 			self::$config = $config;
 		}
-		
+		// random
 		public static function get($key)
 		{
 			return self::$config[$key];
