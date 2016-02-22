@@ -3,6 +3,7 @@ namespace Socio
 {
 	class Settings
 	{
+		
 		public static $config = null;
 		
 		public static function init($config)
